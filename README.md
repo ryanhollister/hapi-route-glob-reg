@@ -1,5 +1,6 @@
+#Hapi route auto-registration
 ---
-Hapi route auto-registration
+[![Build Status](https://travis-ci.org/andyroyle/hapi-route-auto-reg.png?branch=master)](https://travis-ci.org/andyroyle/hapi-route-auto-reg) [![NPM version](https://badge.fury.io/js/hapi-route-auto-reg.png)](http://badge.fury.io/js/hapi-route-auto-reg) ![Dependencies](https://david-dm.org/andyroyle/hapi-route-auto-reg.png)
 
 Automatically scans the directory and registers the routes it finds within
 
