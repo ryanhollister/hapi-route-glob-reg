@@ -1,6 +1,6 @@
 {
   "name": "hapi-route-auto-reg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatic registration for hapi routes",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:andyroyle/hapi-route-auto-reg.git"
+    "url": "git@github.com:opentable/hapi-route-auto-reg.git"
   },
   "keywords": [
     "hapi",
@@ -17,9 +17,9 @@
   "author": "Andy Royle <ajroyle@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andyroyle/hapi-route-auto-reg/issues"
+    "url": "https://github.com/opentable/hapi-route-auto-reg/issues"
   },
-  "homepage": "https://github.com/andyroyle/hapi-route-auto-reg",
+  "homepage": "https://github.com/opentable/hapi-route-auto-reg",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-cli": "^0.1.13",
