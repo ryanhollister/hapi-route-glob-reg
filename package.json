@@ -1,6 +1,6 @@
 {
   "name": "hapi-route-auto-reg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatic registration for hapi routes",
   "main": "index.js",
   "scripts": {
