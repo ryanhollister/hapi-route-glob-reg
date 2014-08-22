@@ -2,7 +2,7 @@ var autoReg = require('./lib/auto-reg');
 
 exports.register = function (plugin, options, next) {
 
-    plugin.log(["debug"], "registering routes from " + options.directory + "...");
+    plugin.log(["routes"], "registering routes from " + options.directory + "...");
 
     autoReg.register(plugin, options.directory);
 
