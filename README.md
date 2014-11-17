@@ -11,20 +11,34 @@ usage:
 
 ```
 var hapi = require("hapi");
-var routes = require('hapi-routes-auto-reg');
 
 var server = Hapi.createServer('127.0.0.1', 3000, {});
 
-routes.register(server, './path/to/routes');
+server.pack.register([
+  {
+    plugin: require("hapi-route-auto-reg"),
+    options: {
+      directory: './path/to/routes'
+    }
+  }], function(err){
+    if(err) {
+      throw err;
+    }
+    
+    server.start(function(){
+      server.log('server started...');
+    });
+});
+
 ```
 
-Scans the given directory for .js files which export a method ```.routes(server)``` and invokes them.
+Scans the given directory for .js files which export a method ```.routes(plugin)``` and invokes them.
 
 The routes files should look like this:
 
 ```
-module.exports.routes = function(server){
-    server.route([
+module.exports.routes = function(plugin){
+    plugin.route([
         {
             method: 'GET',
             path: '/my/test/route',
