@@ -14,7 +14,11 @@ var hapi = require("hapi");
 
 var server = Hapi.createServer('127.0.0.1', 3000, {});
 
+// hapi <= 7.x
 server.pack.register([
+...
+// hapi v8.x
+server.register([
   {
     plugin: require("hapi-route-auto-reg"),
     options: {
@@ -37,8 +41,8 @@ Scans the given directory for .js files which export a method ```.routes(plugin)
 The routes files should look like this:
 
 ```
-module.exports.routes = function(plugin){
-    plugin.route([
+module.exports.routes = function(server){
+    server.route([
         {
             method: 'GET',
             path: '/my/test/route',
