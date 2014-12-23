@@ -1,11 +1,12 @@
-#Hapi route auto-registration
-[![Build Status](https://travis-ci.org/opentable/hapi-route-auto-reg.png?branch=master)](https://travis-ci.org/opentable/hapi-route-auto-reg) [![NPM version](https://badge.fury.io/js/hapi-route-auto-reg.png)](http://badge.fury.io/js/hapi-route-auto-reg) ![Dependencies](https://david-dm.org/opentable/hapi-route-auto-reg.png)
+#Hapi route glob-registration
 
-Automatically scans the directory and registers the routes it finds within
+This was originally forked from https://github.com/opentable/hapi-route-auto-reg but I needed a way to pass a list of directories and wildcards.
+
+Automatically scans the globs and registers the routes it finds within
 
 installation:
 
-```npm install hapi-route-auto-reg```
+```npm install hapi-route-glob-reg```
 
 usage:
 
@@ -20,9 +21,9 @@ server.pack.register([
 // hapi v8.x
 server.register([
   {
-    plugin: require("hapi-route-auto-reg"),
+    plugin: require("hapi-route-glob-reg"),
     options: {
-      directory: './path/to/routes'
+      directory: ['./path/to/routes/**/']
     }
   }], function(err){
     if(err) {

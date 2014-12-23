@@ -18,13 +18,18 @@ describe('auto-reg tests', function(){
         r.length.should.eql(1);
     });
 
+    it('should scan a list of directories', function(){
+        autoReg.register(plugin, ['./tests/test-routes/simple/', './tests/test-routes/recursive/**/'], function(err) {});
+        r.length.should.eql(3);
+    });
+
     it('should invoke the registration method', function(){
         autoReg.register(plugin, './tests/test-routes/simple/', function(err) {});
         r[0].path.should.eql('/my/test/route');
     });
 
     it('should search recursively', function(){
-        autoReg.register(plugin, './tests/test-routes/recursive/', function(err) {});
+        autoReg.register(plugin, './tests/test-routes/recursive/**/', function(err) {});
         r.length.should.eql(2);
     });
 

@@ -1,25 +1,26 @@
 {
-  "name": "hapi-route-auto-reg",
-  "version": "1.0.4",
-  "description": "Automatic registration for hapi routes",
+  "name": "hapi-route-glob-reg",
+  "version": "1.0.0",
+  "description": "Automatic registration for hapi routes that accepts globs and lists of directories",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:opentable/hapi-route-auto-reg.git"
+    "url": "git@github.com:ryanhollister/hapi-route-glob-reg.git"
   },
   "keywords": [
     "hapi",
-    "routes"
+    "routes",
+    "glob"
   ],
-  "author": "Andy Royle <ajroyle@gmail.com>",
+  "author": "Ryan Hollister",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/opentable/hapi-route-auto-reg/issues"
+    "url": "https://github.com/ryanhollister/hapi-route-glob-reg/issues"
   },
-  "homepage": "https://github.com/opentable/hapi-route-auto-reg",
+  "homepage": "https://github.com/ryanhollister/hapi-route-glob-reg",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-cli": "^0.1.13",
@@ -29,6 +30,10 @@
     "should": "^3.3.1"
   },
   "dependencies": {
-    "walk": "^2.3.1"
+    "glob": "4.3.2",
+    "path": "0.4.9"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
